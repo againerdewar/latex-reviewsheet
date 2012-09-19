@@ -1,0 +1,34 @@
+\ProvidesPackage{agd-review}
+
+\usepackage[american]{babel}
+\usepackage[babel]{csquotes}
+
+\usepackage{hyperref}
+
+\usepackage[T1]{fontenc}
+\usepackage[urw-garamond]{mathdesign}
+
+\usepackage[margin=1.0in]{geometry}
+
+\SectionPrefix{}
+\ContinuousNumbering
+
+\newcommand*{\testinst}[1]{\gdef\@testinst{#1}}
+
+\renewcommand*{\maketitle}{
+  \begin{examtop}
+    Name: \hrulefill \\
+    \begin{center}
+      \Large\textbf{\classdata}
+      \Large\textbf{\examtype}
+    \end{center}
+    \@testinst
+  \end{examtop}
+
+  \begin{keytop}
+    \begin{center}
+      \Large\textbf{\classdata}
+      \Large\textbf{\examtype, Solutions}
+    \end{center}
+  \end{keytop}
+}
